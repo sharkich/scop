@@ -1,13 +1,20 @@
-// handle status
+import express from 'express';
 
-// handle get the domains list (for the pawns)
+const app = express();
 
-// check statuses of known queens
-// check statuses of pawns
+const PORT = process.env.PORT || 3021;
 
-// add new queen
-// remove queen
-// send proposal to known queens for adding a new domain
-// send proposal to known queens for removing a domain
+app.get('/', (req, res) => {
+  res.send('Social Cheesing Of Peace');
+});
 
-export const QUEEN = 'QUEEN';
+app.get('/ping', (req, res) => {
+  res.json({
+    pong: new Date()
+  });
+});
+
+app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Example app listening on port http://localhost:${PORT}`);
+});
