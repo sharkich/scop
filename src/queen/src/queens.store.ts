@@ -1,4 +1,5 @@
 import { Queen } from '@interfaces/Queen';
+import { uuid } from '@utils/uuid';
 
 export class QueensStore {
   queens: Queen[] = [];
@@ -27,7 +28,7 @@ export class QueensStore {
 
   private static generateQueen(host: string, createdBy: string): Queen {
     return {
-      id: host,
+      id: uuid(),
       host,
       created: new Date(),
       createdBy,

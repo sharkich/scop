@@ -12,6 +12,7 @@ export interface Queen {
 }
 
 export interface RawQueen {
+  id: string;
   host: string;
   created: string;
   createdBy: string;

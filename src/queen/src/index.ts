@@ -2,9 +2,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 
+import { APP_QUEEN_PORT, LCINFO } from '../../APP_CONST';
 import { QueensStore } from './queens.store';
-
-const PORT = process.env.PORT || 3021;
 
 const app = express();
 
@@ -47,7 +46,7 @@ app.post('/queens/add', async (req, res) => {
   });
 });
 
-app.listen(PORT, async () => {
+app.listen(APP_QUEEN_PORT, async () => {
   // eslint-disable-next-line no-console
-  console.log(`Example app listening on port http://localhost:${PORT}`);
+  console.log(LCINFO, `SCOP listening on port http://localhost:${APP_QUEEN_PORT}`);
 });
