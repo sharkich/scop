@@ -1,7 +1,11 @@
+import { Nullable } from '@utils/fp';
+
 import { OnlineStatus } from './OnlineStatus';
 
 export interface Queen {
-  ip: string;
-  status: OnlineStatus;
-  lastOnline: Date;
+  host: string;
+  created: Date;
+  createdBy: string;
+  status: Nullable<OnlineStatus>;
+  lastOnline: Nullable<Date>;
 }
