@@ -27,6 +27,7 @@ export class QueensStore {
 
   private static generateQueen(host: string, createdBy: string): Queen {
     return {
+      id: host,
       host,
       created: new Date(),
       createdBy,

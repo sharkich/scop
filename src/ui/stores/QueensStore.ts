@@ -5,9 +5,13 @@ import { Queen } from '@interfaces/Queen';
 import { RootStore } from './RootStore';
 
 export class QueensStore {
-  private _queens: Queen[] = [];
+  queens: Queen[] = [];
 
   constructor(private rootStore: RootStore) {
     makeAutoObservable(this); // , { rootStore: false }
+  }
+
+  setList(queens: Queen[]) {
+    this.queens = queens;
   }
 }
